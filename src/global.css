@@ -2,6 +2,22 @@ body {
     color: #fff;
     background: #17181c;
     font-family: sans-serif;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    padding: 0;
+    margin: 0;
+}
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+@media (width > 1100px) {
+    .main {
+        flex-direction: row;
+        align-items: flex-start;
+    }
 }
 
 header {
@@ -18,18 +34,19 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-footer .copyright {
+
+ .copyright {
     font-size: 14px;
     color: #333;
     text-align: center;
 }
-footer .copyright a {
+ .copyright a {
     color: #444;
 }
-footer .copyright a:hover {
+ .copyright a:hover {
     color: #555;
 }
-footer .copyright:before {
+ .copyright:before {
     content: '©';
+}
 }
